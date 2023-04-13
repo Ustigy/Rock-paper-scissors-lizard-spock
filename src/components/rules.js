@@ -5,18 +5,13 @@ import close from '../img/icon-close.svg';
 
 
 function RulesCard(props) {
-    // console.log(props.rulesState);
-
-    function unmountComponent() {
-        setRulesState ('closeRules');
-    }
 
     if(props.rulesState === 'openRules') {
         return (
             <div className="rules-card">
                 <div className='rules-header'>
                     <span>RULES</span>
-                    <button><img src={close} onClick={unmountComponent} /></button>
+                    <button><img src={close} onClick={() => props.setRulesState('closeRules')}/></button>
                 </div>
                 <img src={rules} className='rules-img' />
             </div>
