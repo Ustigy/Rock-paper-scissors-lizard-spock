@@ -1,0 +1,212 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: linear-gradient(to right, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
+    display: flex;
+    justify-content: center;
+
+    font-family: 'League Spartan', sans-serif;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+    /* font-family: 'Azeret Mono', monospace; */
+    /* font-family: 'League Spartan', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+
+
+.container {
+    min-width: 500px;
+    margin: 20px;
+}
+
+.header {
+    border: 2px hsl(217, 16%, 45%) solid;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.names_signs {
+    margin: 0px 20px;
+
+    line-height: 0.3;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    color: aliceblue;
+}
+
+.score {
+    width: 120px;
+    height: 96px;
+    border-radius: 7px;
+    margin: 0px 20px;
+    background-color: aliceblue;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score_name {
+    color: hsl(229, 64%, 46%);
+    font-weight: 500;
+}
+
+.score_counter {
+    font-size: 50px;
+    color: hsl(229, 25%, 31%);
+    font-weight: 600;
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+    height: 350px;
+    margin-top: 40px;
+
+    background-image: url(../src/img/bg-pentagon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: grid;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-areas:
+        '. . scissors . .'
+        'spock . . . paper'
+        '. lizard . rock .';
+}
+
+.sign_container {
+    
+}
+
+.sign_circle_color {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* box-shadow: 0 5px 0 hsla(40, 84%, 53%, 0.493); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign_circle_white {
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: aliceblue;
+    box-shadow: inset 0 5px 0 rgba(76, 84, 92, 0.247);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign_img {
+    height: 40px;
+}
+
+.scissors {
+    position: relative;
+    bottom: 20px;
+}
+
+.spock {
+    position: relative;
+    left: 50px;
+    bottom: 20px;
+}
+
+.paper {
+    position: relative;
+    right: 50px;
+    bottom: 20px;
+}
+
+.lizard {
+    position: relative;
+    top: 30px;
+}
+
+.rock {
+    position: relative;
+    top: 30px; 
+}
+
+
+.rules {
+    position:absolute;
+    bottom:0;
+    right:0;
+    margin: 20px;
+}
+
+.rules-button {
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px hsl(216, 17%, 62%) solid;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 500;
+    background-color: transparent;
+    color: aliceblue;
+
+    cursor: pointer;
+}
+
+.rules-button:active {
+    box-shadow: inset 0 0 10px aliceblue;
+}
+
+.rules-card {
+    padding: 40px 30px;
+    border-radius: 7px;
+
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-55%, -60%);
+
+    background-color: aliceblue;
+    margin: 20px;
+}
+
+.rules-header span {
+    font-weight: 600;
+    font-size: 30px;
+    color: hsl(239, 23%, 46%);
+}
+
+.rules-header button {
+    border: 0;
+    background-color: transparent;
+}
+
+.rules-header img:active {
+    box-shadow: inset 0 0 10px hsl(239, 23%, 46%);
+}
+
+.rules-card .rules-img {
+    margin-top: 20px;
+    width: 250px;
+}
+
+.rules-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
