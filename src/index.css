@@ -213,3 +213,37 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+.game {
+    width: 100%;
+    height: 350px;
+    margin-top: 40px;
+}
+
+.game_container {
+    width: 50%;
+
+    margin-top: 20%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameSign {
+    
+}
+
+.game .gameSign__title {
+    color: aliceblue;
+    font-size: 24px;
+}
+
+.game .sign_circle_color {
+    width: 200px;
+    height: 200px;
+}
+
+.game .sign_img {
+    height: 80px;
+}
