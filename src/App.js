@@ -10,7 +10,7 @@ import Game from './components/game';
 
 function App() {
       const [generalState, setGeneralState] = useState('main');
-      useEffect(() => console.log(generalState))
+      // useEffect(() => console.log(generalState))
 
       const [chosenSignState, setChosenSignState] = useState(null);
       // useEffect(() => console.log(chosenSignState))
@@ -21,7 +21,12 @@ function App() {
                   <>
                         <div className='container'>
                               <Header />
-                              <Main setGeneralState = {setGeneralState} setChosenSignState = {setChosenSignState} />
+                              <Main 
+                              generalState = {generalState}
+                              setGeneralState = {setGeneralState}
+                              chosenSignState = {chosenSignState}
+                              setChosenSignState = {setChosenSignState} 
+                              />
                         </div>
             
                         <div className='rules-container'>
@@ -34,7 +39,13 @@ function App() {
                   <>
                         <div className='container'>
                               <Header />
-                              <Game chosenSignState = {chosenSignState} />
+                              {/* <Game chosenSignState = {chosenSignState} /> */}
+                              <Game 
+                              generalState = {generalState}
+                              setGeneralState = {setGeneralState}
+                              chosenSignState = {chosenSignState}
+                              setChosenSignState = {setChosenSignState}
+                              />
                         </div>
             
                         <div className='rules-container'>

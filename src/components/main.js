@@ -17,7 +17,9 @@ function Main(props) {
                 boxShadow='0 5px 0 hsla(40, 84%, 53%, 0.493)' 
                 img={scissors}
                 gridArea='scissors'
+                generalState = {props.generalState}
                 setGeneralState = {props.setGeneralState}
+                chosenSignState = {props.chosenSignState}
                 setChosenSignState = {props.setChosenSignState}
             />
 
@@ -27,7 +29,9 @@ function Main(props) {
                 boxShadow='0 5px 0 hsl(190, 58%, 57%, 0.493)'
                 img={spock}
                 gridArea='spock'
+                generalState = {props.generalState}
                 setGeneralState = {props.setGeneralState}
+                chosenSignState = {props.chosenSignState}
                 setChosenSignState = {props.setChosenSignState}
             />
 
@@ -37,9 +41,10 @@ function Main(props) {
                 boxShadow='0 5px 0 hsl(231, 89%, 65%, 0.493)'
                 img={paper}
                 gridArea='paper'
+                generalState = {props.generalState}
                 setGeneralState = {props.setGeneralState}
-                setChosenSignState = {props.setChosenSignState}
-            />
+                chosenSignState = {props.chosenSignState}
+                setChosenSignState = {props.setChosenSignState}            />
 
             <Sign 
                 className='lizard' 
@@ -47,9 +52,10 @@ function Main(props) {
                 boxShadow='0 5px 0 hsl(262, 72%, 63%, 0.493)'
                 img={lizard}
                 gridArea='lizard'
+                generalState = {props.generalState}
                 setGeneralState = {props.setGeneralState}
-                setChosenSignState = {props.setChosenSignState}
-            />
+                chosenSignState = {props.chosenSignState}
+                setChosenSignState = {props.setChosenSignState}            />
 
             <Sign 
                 className='rock' 
@@ -57,9 +63,10 @@ function Main(props) {
                 boxShadow='0 5px 0 hsl(349, 70%, 56%, 0.493)'
                 img={rock}
                 gridArea='rock'
+                generalState = {props.generalState}
                 setGeneralState = {props.setGeneralState}
-                setChosenSignState = {props.setChosenSignState}
-            />                       
+                chosenSignState = {props.chosenSignState}
+                setChosenSignState = {props.setChosenSignState}            />                       
         </div>
     )
 

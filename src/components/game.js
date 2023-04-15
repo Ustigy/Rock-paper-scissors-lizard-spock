@@ -1,24 +1,28 @@
+import Sign from "./sign";
+
 function Game(props) {
+    // console.log(props)
+
     return (
         <div className="game">
-            <div className="game_container">
-                <p className="gameSign__title">YOU PICKED</p>
-                {console.log(props.chosenSignState)}
+            <Sign
+            name = 'chosen'
+            generalState = {props.generalState}
+            setGeneralState = {props.setGeneralState}
+            chosenSignState = {props.chosenSignState}
+            setChosenSignState = {props.setChosenSignState} 
+            />
 
-                <div className={'gameSign'} >
+            <Sign
+            name = 'computer'
+            generalState = {props.generalState}
+            setGeneralState = {props.setGeneralState}
+            chosenSignState = {props.chosenSignState}
+            setChosenSignState = {props.setChosenSignState} 
+            />
 
-                    <div className='sign_circle_color' style={{backgroundColor: props.chosenSignState.backgroundColor, 
-                                                       boxShadow: props.chosenSignState.boxShadow,
-                                                       cursor: 'default'}} >                      
-                        <div className='sign_circle_white'>
-                            <img className='sign_img' src={props.chosenSignState.img} />
-                        </div>
-                    </div>
-
-                 </div>
-
-            </div>
         </div>
+
     )
 }
 
