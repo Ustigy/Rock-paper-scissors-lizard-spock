@@ -48,13 +48,21 @@ function Sign(props) {
 
         if (props.name === 'chosen') {
             // console.log(props.winnerState.resaultMessage)
+
+            // console.log(props.resault)
+            let styleResault = null;
+            if (props.resault === 'win') {
+                styleResault = 'highliterWinner';
+            } else if (props.resault === 'draw') {
+                styleResault = 'highliterDraw';
+            }
             
             return (
                 <div className="game_container">
                     <p className="gameSign__title">YOU PICKED</p>
                     {/* {console.log(props.chosenSignState)} */}
     
-                    <div className='gameSign' >
+                    <div className={'gameSign' + ' ' + styleResault} >
     
                         <div className='sign_circle_color' style={{backgroundColor: props.chosenSignState.arraySign.backgroundColor, 
                                                         boxShadow: props.chosenSignState.arraySign.boxShadow,
@@ -71,12 +79,19 @@ function Sign(props) {
 
         } else if (props.name === 'computer') {
 
+            let styleResault = null;
+            if (props.resault === 'lose') {
+                styleResault = 'highliterLooser';
+            } else if (props.resault === 'draw') {
+                styleResault = 'highliterDraw';
+            }
+
             return (
                 <div className="game_container">
                         <p className="gameSign__title">THE HOUSE PICKED</p>
                         {/* {console.log(props.chosenSignState)} */}
         
-                        <div className='gameSign' >
+                        <div className={'gameSign' + ' ' + styleResault} >
         
                             <div className='sign_circle_color' style={{backgroundColor: props.chosenComputer.backgroundColor, 
                                                             boxShadow: props.chosenComputer.boxShadow,

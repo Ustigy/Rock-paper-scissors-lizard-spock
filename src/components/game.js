@@ -3,6 +3,7 @@ import Sign from "./sign";
 
 let resault;
 let resaultMessage;
+
 function selectWinner(props) {
     // console.log(props.chosenSignState.arraySign.id);
     // console.log(props.chosenComputer.id);
@@ -15,7 +16,11 @@ function selectWinner(props) {
         case -1:
         case 2:
         case 4:
+            resault = 'win';
             resaultMessage = 'YOU WIN';
+            props.setScoreState(props.generalScore + 1);
+
+            // console.log(props.generalScore)
             // console.log('Win');
             break;
 
@@ -23,15 +28,25 @@ function selectWinner(props) {
         case -2:
         case 3:
         case 1:
+            resault = 'lose';
             resaultMessage = 'YOU LOSE';
+            props.setScoreState(props.generalScore - 1);
+
             // console.log('Lose');
             break;
         
         default:
+            resault = 'draw';
             resaultMessage = 'DRAW';
+            // props.setScoreState(props.generalScore)
+
             // console.log('DRAW');
             break;
     }
+}
+
+function handlerNewGame(props) {
+    props.setGeneralState('main');
 }
 
 
@@ -41,7 +56,7 @@ function Game(props) {
     selectWinner(props);
 
     // const [winnerState, setWinnerState] = useState({resaultMessage});
-    
+    // console.log(resault)
 
     return (
         <div className="game">
@@ -52,7 +67,8 @@ function Game(props) {
             chosenSignState = {props.chosenSignState}
             setChosenSignState = {props.setChosenSignState}
 
-            winnerState = {winnerState}
+            resault = {resault}
+            // winnerState = {winnerState}
             />
 
             <Sign
@@ -64,13 +80,14 @@ function Game(props) {
 
             chosenComputer = {props.chosenComputer}
 
-            winnerState = {winnerState}
+            resault = {resault}
+            // winnerState = {winnerState}
             />
 
 
             <div className="result-container">
                 <p>{resaultMessage}</p>
-                <button>PLAY AGAIN</button>
+                <button onClick={() => handlerNewGame(props)}>PLAY AGAIN</button>
             </div>
 
         </div>

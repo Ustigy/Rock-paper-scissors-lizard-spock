@@ -274,5 +274,16 @@ body {
 }
 
 .highliterWinner {
-    border: 5px solid red;
+    border-radius: 50%;
+    box-shadow:  0px 0px 10px 18px hsl(130, 64%, 46%);
+}
+
+.highliterLooser {
+    border-radius: 50%;
+    box-shadow:  0px 0px 10px 18px hsl(0, 66%, 51%);
+}
+
+.highliterDraw {
+    border-radius: 50%;
+    box-shadow:  0px 0px 10px 18px hsl(229, 64%, 46%);
 }
