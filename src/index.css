@@ -247,3 +247,32 @@ body {
 .game .sign_img {
     height: 80px;
 }
+
+.result-container {
+    text-align: center;
+
+}
+
+.result-container p {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: aliceblue;
+    line-height: 0;
+}
+
+.result-container button {
+    padding: 10px 50px;
+    border-radius: 10px;
+    border: 2px aliceblue solid;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    background-color: aliceblue;
+    color: hsl(229, 64%, 46%);
+
+    cursor: pointer;
+}
+
+.highliterWinner {
+    border: 5px solid red;
+}

@@ -1,22 +1,37 @@
 import Sign from './sign';
 
-import scissors from '../img/icon-scissors.svg';
-import spock from '../img/icon-spock.svg';
-import paper from '../img/icon-paper.svg';
-import lizard from '../img/icon-lizard.svg';
-import rock from '../img/icon-rock.svg';
+
+// function computerTurn (props) {
+//     // console.log((props.arraySigns))
+
+//     let arr = [];
+//     for (let key in props.arraySigns) {
+//         arr.push(key)
+//         // console.log(arr)
+//     }
+
+//     let rand = Math.floor(Math.random() * arr.length);
+
+//     // console.log(arr[rand])
+
+//     // console.log(props.arraySigns[arr[rand]])
+
+//     props.setComputerSignState(props.arraySigns[arr[rand]])
+
+// }
 
 function Main(props) {
     // console.log(props.setGeneralState)
+    // console.log(props.arraySigns.scissors.img)
+
+    // computerTurn (props);
 
     return (
         <div className='main'>
             <Sign 
-                className='scissors' 
-                backgroundColor='hsl(39, 89%, 49%)' 
-                boxShadow='0 5px 0 hsla(40, 84%, 53%, 0.493)' 
-                img={scissors}
-                gridArea='scissors'
+                arraySign = {props.arraySigns.scissors}
+                img = {props.arraySigns.scissors.img.scissors}
+
                 generalState = {props.generalState}
                 setGeneralState = {props.setGeneralState}
                 chosenSignState = {props.chosenSignState}
@@ -24,11 +39,9 @@ function Main(props) {
             />
 
             <Sign 
-                className='spock' 
-                backgroundColor='hsl(189, 58%, 57%)' 
-                boxShadow='0 5px 0 hsl(190, 58%, 57%, 0.493)'
-                img={spock}
-                gridArea='spock'
+                arraySign = {props.arraySigns.spock}
+                img = {props.arraySigns.spock.img.spock}
+
                 generalState = {props.generalState}
                 setGeneralState = {props.setGeneralState}
                 chosenSignState = {props.chosenSignState}
@@ -36,37 +49,34 @@ function Main(props) {
             />
 
             <Sign 
-                className='paper' 
-                backgroundColor='hsl(230, 89%, 65%)' 
-                boxShadow='0 5px 0 hsl(231, 89%, 65%, 0.493)'
-                img={paper}
-                gridArea='paper'
+                arraySign = {props.arraySigns.paper}
+                img = {props.arraySigns.paper.img.paper}
+
                 generalState = {props.generalState}
                 setGeneralState = {props.setGeneralState}
                 chosenSignState = {props.chosenSignState}
-                setChosenSignState = {props.setChosenSignState}            />
+                setChosenSignState = {props.setChosenSignState}
+            />
 
             <Sign 
-                className='lizard' 
-                backgroundColor='hsl(261, 72%, 63%)' 
-                boxShadow='0 5px 0 hsl(262, 72%, 63%, 0.493)'
-                img={lizard}
-                gridArea='lizard'
+                arraySign = {props.arraySigns.lizard}
+                img = {props.arraySigns.lizard.img.lizard}
+
                 generalState = {props.generalState}
                 setGeneralState = {props.setGeneralState}
                 chosenSignState = {props.chosenSignState}
-                setChosenSignState = {props.setChosenSignState}            />
+                setChosenSignState = {props.setChosenSignState}
+            />
 
             <Sign 
-                className='rock' 
-                backgroundColor='hsl(349, 70%, 56%)' 
-                boxShadow='0 5px 0 hsl(349, 70%, 56%, 0.493)'
-                img={rock}
-                gridArea='rock'
+                arraySign = {props.arraySigns.rock}
+                img = {props.arraySigns.rock.img.rock}
+
                 generalState = {props.generalState}
                 setGeneralState = {props.setGeneralState}
                 chosenSignState = {props.chosenSignState}
-                setChosenSignState = {props.setChosenSignState}            />                       
+                setChosenSignState = {props.setChosenSignState}
+            />
         </div>
     )
 
