@@ -21,19 +21,6 @@ let arraySigns = {
             boxShadow: '0 5px 0 hsla(40, 84%, 53%, 0.493)',
             img: {scissors},
             gridArea: 'scissors',
-            // generalState = {props.generalState}
-            // setGeneralState = {props.setGeneralState}
-            // chosenSignState = {props.chosenSignState}
-            // setChosenSignState = {props.setChosenSignState}
-      },
-
-      spock: {
-            className: 'spock',
-            id: 4,
-            backgroundColor: 'hsl(189, 58%, 57%)' ,
-            boxShadow: '0 5px 0 hsl(190, 58%, 57%, 0.493)',
-            img: {spock},
-            gridArea: 'spock',
       },
 
       paper: {
@@ -45,6 +32,15 @@ let arraySigns = {
             gridArea: 'paper',
       },
 
+      rock: {
+            className: 'rock',
+            id: 2,
+            backgroundColor: 'hsl(349, 70%, 56%)',
+            boxShadow: '0 5px 0 hsl(349, 70%, 56%, 0.493)',
+            img: {rock},
+            gridArea: 'rock',
+      },
+
       lizard: {
             className: 'lizard',
             id: 3,
@@ -54,13 +50,13 @@ let arraySigns = {
             gridArea: 'lizard',
       },
       
-      rock: {
-            className: 'rock',
-            id: 2,
-            backgroundColor: 'hsl(349, 70%, 56%)',
-            boxShadow: '0 5px 0 hsl(349, 70%, 56%, 0.493)',
-            img: {rock},
-            gridArea: 'rock',
+      spock: {
+            className: 'spock',
+            id: 4,
+            backgroundColor: 'hsl(189, 58%, 57%)' ,
+            boxShadow: '0 5px 0 hsl(190, 58%, 57%, 0.493)',
+            img: {spock},
+            gridArea: 'spock',
       },
 };
 
@@ -73,9 +69,6 @@ function App() {
       const [chosenSignState, setChosenSignState] = useState(null);
       // useEffect(() => console.log(chosenSignState))
 
-      // const [computerSignState, setComputerSignState] = useState(null);
-      // useEffect(() => console.log(computerSignState))
-
       const [generalScore, setScoreState] = useState(0);
 
 
@@ -86,7 +79,6 @@ function App() {
                   arrNames.push(key);
             }
             let rand = Math.floor(Math.random() * arrNames.length);
-            // console.log(arraySigns[arrNames[rand]])
             chosenComputer = arraySigns[arrNames[rand]];
       }
       computerTurn();
@@ -97,18 +89,15 @@ function App() {
                   <>
                         <div className='container'>
                               <Header 
-                              generalScore = {generalScore}
+                                    generalScore = {generalScore}
                               />
                               <Main 
-                              arraySigns = {arraySigns}
+                                    arraySigns = {arraySigns}
 
-                              generalState = {generalState}
-                              setGeneralState = {setGeneralState}
-                              chosenSignState = {chosenSignState}
-                              setChosenSignState = {setChosenSignState}
-
-                              // computerSignState = {computerSignState}
-                              // setComputerSignState = {setComputerSignState}
+                                    generalState = {generalState}
+                                    setGeneralState = {setGeneralState}
+                                    chosenSignState = {chosenSignState}
+                                    setChosenSignState = {setChosenSignState}
                               />
                         </div>
             
@@ -122,19 +111,18 @@ function App() {
                   <>
                         <div className='container'>
                               <Header
-                              generalScore = {generalScore}
+                                    generalScore = {generalScore}
                               />
-                              {/* <Game chosenSignState = {chosenSignState} /> */}
                               <Game 
-                              generalState = {generalState}
-                              setGeneralState = {setGeneralState}
-                              chosenSignState = {chosenSignState}
-                              setChosenSignState = {setChosenSignState}
+                                    generalState = {generalState}
+                                    setGeneralState = {setGeneralState}
+                                    chosenSignState = {chosenSignState}
+                                    setChosenSignState = {setChosenSignState}
 
-                              chosenComputer = {chosenComputer}
+                                    chosenComputer = {chosenComputer}
 
-                              generalScore = {generalScore}
-                              setScoreState = {setScoreState}
+                                    generalScore = {generalScore}
+                                    setScoreState = {setScoreState}
                               />
                         </div>
             
@@ -143,10 +131,7 @@ function App() {
                         </div>
                   </>
             )
-
       }
-
-
 }
 
 export default App;

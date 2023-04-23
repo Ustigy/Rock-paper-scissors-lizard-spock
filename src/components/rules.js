@@ -17,7 +17,6 @@ function RulesCard(props) {
             </div>
         )
     }
-
 }
 
 function Rules() {

@@ -1,30 +1,6 @@
 import Sign from './sign';
 
-
-// function computerTurn (props) {
-//     // console.log((props.arraySigns))
-
-//     let arr = [];
-//     for (let key in props.arraySigns) {
-//         arr.push(key)
-//         // console.log(arr)
-//     }
-
-//     let rand = Math.floor(Math.random() * arr.length);
-
-//     // console.log(arr[rand])
-
-//     // console.log(props.arraySigns[arr[rand]])
-
-//     props.setComputerSignState(props.arraySigns[arr[rand]])
-
-// }
-
 function Main(props) {
-    // console.log(props.setGeneralState)
-    // console.log(props.arraySigns.scissors.img)
-
-    // computerTurn (props);
 
     return (
         <div className='main'>
@@ -79,7 +55,6 @@ function Main(props) {
             />
         </div>
     )
-
 }
 
 
