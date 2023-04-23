@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Sign from "./sign";
 
 let resault;
@@ -18,10 +18,10 @@ function selectWinner(props) {
         case 4:
             resault = 'win';
             resaultMessage = 'YOU WIN';
-            props.setScoreState(props.generalScore + 1);
 
+            props.setScoreState(props.generalScore + 1);
             // console.log(props.generalScore)
-            // console.log('Win');
+            console.log('Win');
             break;
 
         case -4:
@@ -29,18 +29,20 @@ function selectWinner(props) {
         case 3:
         case 1:
             resault = 'lose';
-            resaultMessage = 'YOU LOSE';
+            resaultMessage = 'YOU LOSE';     
+            
+            
             props.setScoreState(props.generalScore - 1);
-
-            // console.log('Lose');
+            console.log('Lose');
             break;
         
         default:
             resault = 'draw';
             resaultMessage = 'DRAW';
-            // props.setScoreState(props.generalScore)
 
-            // console.log('DRAW');
+
+            props.setScoreState(props.generalScore + 0);
+            console.log('DRAW');
             break;
     }
 }
@@ -52,7 +54,6 @@ function handlerNewGame(props) {
 
 function Game(props) {
     // console.log(props.chosenSignState)
-
     selectWinner(props);
 
     // const [winnerState, setWinnerState] = useState({resaultMessage});

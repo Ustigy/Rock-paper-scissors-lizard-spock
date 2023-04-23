@@ -9,7 +9,6 @@ function Header(props) {
 
             <div className="score">
                 <p className='score_name'>SCORE</p>
-                {/* <p className="score_counter">{props.generalScore}</p> */}
                 <p className="score_counter">{props.generalScore}</p>
             </div>
         </div>

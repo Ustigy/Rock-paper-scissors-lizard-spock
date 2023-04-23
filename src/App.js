@@ -77,7 +77,7 @@ function App() {
       // useEffect(() => console.log(computerSignState))
 
       const [generalScore, setScoreState] = useState(0);
-      useEffect(() => console.log(generalScore))
+
 
       let chosenComputer;
       function computerTurn() {
@@ -105,7 +105,7 @@ function App() {
                               generalState = {generalState}
                               setGeneralState = {setGeneralState}
                               chosenSignState = {chosenSignState}
-                              setChosenSignState = {setChosenSignState} 
+                              setChosenSignState = {setChosenSignState}
 
                               // computerSignState = {computerSignState}
                               // setComputerSignState = {setComputerSignState}
@@ -121,7 +121,7 @@ function App() {
             return (
                   <>
                         <div className='container'>
-                              <Header 
+                              <Header
                               generalScore = {generalScore}
                               />
                               {/* <Game chosenSignState = {chosenSignState} /> */}
