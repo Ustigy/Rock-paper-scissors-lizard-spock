@@ -71,6 +71,13 @@ function App() {
 
       const [generalScore, setScoreState] = useState(0);
 
+      function increment() {
+            setScoreState(generalScore + 1);
+      }
+
+      function decrement() {
+            setScoreState(generalScore - 1);
+      }
 
       let chosenComputer;
       function computerTurn() {
@@ -121,8 +128,10 @@ function App() {
 
                                     chosenComputer = {chosenComputer}
 
-                                    generalScore = {generalScore}
-                                    setScoreState = {setScoreState}
+                                    // generalScore = {generalScore}
+                                    // setScoreState = {setScoreState}
+                                    increment = {increment}
+                                    decrement = {decrement}
                               />
                         </div>
             
