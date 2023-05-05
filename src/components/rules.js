@@ -5,7 +5,6 @@ import close from '../img/icon-close.svg';
 
 
 function RulesCard(props) {
-
     if(props.rulesState === 'openRules') {
         return (
             <div className="rules-card">

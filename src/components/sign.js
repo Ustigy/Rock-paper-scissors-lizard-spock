@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import Game from "./game";
 
 function handlerSignClick(props) {
     props.setGeneralState('game');

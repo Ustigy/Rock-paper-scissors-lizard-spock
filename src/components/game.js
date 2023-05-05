@@ -16,9 +16,6 @@ function selectWinner(props) {
             resault = 'win';
             resaultMessage = 'YOU WIN';
             props.increment();
-            // props.setScoreState(props.generalScore + 1);
-
-            // console.log(resault);
             break;
 
         case -4:
@@ -28,19 +25,11 @@ function selectWinner(props) {
             resault = 'lose';
             resaultMessage = 'YOU LOSE';
             props.decrement();   
-
-            // props.setScoreState(props.generalScore - 1);
-
-            // console.log(resault);
             break;
         
         default:
             resault = 'draw';
             resaultMessage = 'DRAW';
-
-            // props.setScoreState(props.generalScore + 0);
-
-            // console.log('DRAW');
             break;
     }
 }
