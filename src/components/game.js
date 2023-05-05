@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Sign from "./sign";
 
 let resault;
@@ -52,7 +52,9 @@ function handlerNewGame(props) {
 
 function Game(props) {
 
-    selectWinner(props);
+    useEffect(() => {
+        selectWinner(props);
+    }, [])
 
     return (
         <div className="game">

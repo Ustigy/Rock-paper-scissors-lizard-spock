@@ -72,11 +72,11 @@ function App() {
       const [generalScore, setScoreState] = useState(0);
 
       function increment() {
-            setScoreState(generalScore + 1);
+            setScoreState(prevState => prevState + 1);
       }
 
       function decrement() {
-            setScoreState(generalScore - 1);
+            setScoreState(prevState => prevState - 1);
       }
 
       let chosenComputer;
